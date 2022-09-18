@@ -1,0 +1,119 @@
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mindex b6e4761..b97131e 100644[m
+[1m--- a/.gitignore[m
+[1m+++ b/.gitignore[m
+[36m@@ -127,3 +127,5 @@[m [mdmypy.json[m
+ [m
+ # Pyre type checker[m
+ .pyre/[m
+[32m+[m
+[32m+[m[32m.idea/[m
+[1mdiff --git a/pandademo2.py b/pandademo2.py[m
+[1mindex 840e5c0..34247b7 100644[m
+[1m--- a/pandademo2.py[m
+[1m+++ b/pandademo2.py[m
+[36m@@ -54,55 +54,55 @@[m [mprint(df)[m
+ #[m
+ # print('print events and day\n', df[['events', 'day']])[m
+ [m
+[31m-# To get the particular Row[m
+[31m-[m
+[31m-print('the index \'2\' row:\n', df.loc[2])[m
+[31m-[m
+[31m-print('to print the temperature column: ', df['temperature'])[m
+[31m-[m
+[31m-# To print the maximum temperature[m
+[31m-[m
+[31m-print('the maximum temperature is: ', df['temperature'].max())[m
+[31m-[m
+[31m-# to print the minimum temperature.[m
+[31m-[m
+[31m-print('the minimum temperature is: ', df['temperature'].min())[m
+[31m-[m
+[31m-# To print the average temperature[m
+[31m-[m
+[31m-print('The average Temperature is: ', df['temperature'].mean())[m
+[31m-[m
+[31m-# To get the description of the dataset[m
+[31m-[m
+[31m-print('The description of the dataset is: \n', df.describe())[m
+[31m-[m
+[31m-# To get temperature greater and  equals 34[m
+[31m-[m
+[31m-print('the temperature >= 32 is: \n', df[df.temperature >= 34])[m
+[31m-[m
+[31m-#  if the column contains spaces then use[m
+[31m-[m
+[31m-# print('The temperature is: ', df[df.temperature == df['temperature'] >= 33])[m
+[31m-[m
+[31m-#  By default pandas set the index from 0-x[m
+[31m-# to see the index use[m
+[31m-print('the index vvalue is: ', df.index)[m
+[31m-#  To Change the index to the specified field.[m
+[31m-[m
+[31m-print('the specified field index is: \n', df.set_index('day'))[m
+[31m-# The above operation returns the new dataframe but does not modify it.[m
+[31m-# To change the dataframe and get the modification result[m
+[31m-[m
+[31m-print('To modify the dataframe for the index is: ', df.set_index('day', inplace=True))[m
+[31m-#  NOw print dataframe and the location of the dataframe.[m
+[31m-print('The dataframe: \n', df)[m
+[31m-print('the specified row is by using the index is :\n', df.loc['12-09-2022'])[m
+[31m-[m
+[31m-# To reset the index to the original one use[m
+[31m-[m
+[31m-df.reset_index(inplace=True)[m
+[31m-#  Now print Dataframe[m
+[31m-print(df)[m
+[32m+[m[32m# # To get the particular Row[m
+[32m+[m[32m#[m
+[32m+[m[32m# print('the index \'2\' row:\n', df.loc[2])[m
+[32m+[m[32m#[m
+[32m+[m[32m# print('to print the temperature column: ', df['temperature'])[m
+[32m+[m[32m#[m
+[32m+[m[32m# # To print the maximum temperature[m
+[32m+[m[32m#[m
+[32m+[m[32m# print('the maximum temperature is: ', df['temperature'].max())[m
+[32m+[m[32m#[m
+[32m+[m[32m# # to print the minimum temperature.[m
+[32m+[m[32m#[m
+[32m+[m[32m# print('the minimum temperature is: ', df['temperature'].min())[m
+[32m+[m[32m#[m
+[32m+[m[32m# # To print the average temperature[m
+[32m+[m[32m#[m
+[32m+[m[32m# print('The average Temperature is: ', df['temperature'].mean())[m
+[32m+[m[32m#[m
+[32m+[m[32m# # To get the description of the dataset[m
+[32m+[m[32m#[m
+[32m+[m[32m# print('The description of the dataset is: \n', df.describe())[m
+[32m+[m[32m#[m
+[32m+[m[32m# # To get temperature greater and  equals 34[m
+[32m+[m[32m#[m
+[32m+[m[32m# print('the temperature >= 32 is: \n', df[df.temperature >= 34])[m
+[32m+[m[32m#[m
+[32m+[m[32m# #  if the column contains spaces then use[m
+[32m+[m[32m#[m
+[32m+[m[32m# # print('The temperature is: ', df[df.temperature == df['temperature'] >= 33])[m
+[32m+[m[32m#[m
+[32m+[m[32m# #  By default pandas set the index from 0-x[m
+[32m+[m[32m# # to see the index use[m
+[32m+[m[32m# print('the index vvalue is: ', df.index)[m
+[32m+[m[32m# #  To Change the index to the specified field.[m
+[32m+[m[32m#[m
+[32m+[m[32m# print('the specified field index is: \n', df.set_index('day'))[m
+[32m+[m[32m# # The above operation returns the new dataframe but does not modify it.[m
+[32m+[m[32m# # To change the dataframe and get the modification result[m
+[32m+[m[32m#[m
+[32m+[m[32m# print('To modify the dataframe for the index is: ', df.set_index('day', inplace=True))[m
+[32m+[m[32m# #  NOw print dataframe and the location of the dataframe.[m
+[32m+[m[32m# print('The dataframe: \n', df)[m
+[32m+[m[32m# print('the specified row is by using the index is :\n', df.loc['12-09-2022'])[m
+[32m+[m[32m#[m
+[32m+[m[32m# # To reset the index to the original one use[m
+[32m+[m[32m#[m
+[32m+[m[32m# df.reset_index(inplace=True)[m
+[32m+[m[32m# #  Now print Dataframe[m
+[32m+[m[32m# print(df)[m
+ [m
+ # Whenever setting the index if column contains the duplicate value the it adds the default index[m
+ # followed by the set index.[m
