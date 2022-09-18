@@ -88,16 +88,16 @@ print(df)
 # # to see the index use
 # print('the index vvalue is: ', df.index)
 # #  To Change the index to the specified field.
-
-print('the specified field index is: \n', df.set_index('day'))
-# The above operation returns the new dataframe but does not modify it.
-# To change the dataframe and get the modification result
-
-print('To modify the dataframe for the index is: ', df.set_index('day', inplace=True))
-#  NOw print dataframe and the location of the dataframe.
-print('The dataframe: \n', df)
-print('the specified row is by using the index is :\n', df.loc['12-09-2022'])
-
+#
+# print('the specified field index is: \n', df.set_index('day'))
+# # The above operation returns the new dataframe but does not modify it.
+# # To change the dataframe and get the modification result
+#
+# print('To modify the dataframe for the index is: ', df.set_index('day', inplace=True))
+# #  NOw print dataframe and the location of the dataframe.
+# print('The dataframe: \n', df)
+# print('the specified row is by using the index is :\n', df.loc['12-09-2022'])
+#
 # # To reset the index to the original one use
 #
 # df.reset_index(inplace=True)
